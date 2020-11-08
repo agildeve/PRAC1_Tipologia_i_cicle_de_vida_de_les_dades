@@ -28,6 +28,8 @@ result = pd.DataFrame()
 for element in dataframes:
     result = result.append(element, ignore_index = True)
 
+# evitem duplicats
+result = result.drop_duplicates()
 #result = pd.concat(dataframes, ignore_index=True)
 
 # Guardem el dataframe obtingut.
